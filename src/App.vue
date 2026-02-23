@@ -12,6 +12,7 @@
       <ContactSection />
     </main>
     <AppFooter />
+    <WhatsAppButton />
   </div>
 </template>
 
@@ -26,4 +27,5 @@ import TestimonialsSection from './components/TestimonialsSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import AppFooter from './components/AppFooter.vue'
+import WhatsAppButton from './components/WhatsAppButton.vue'
 </script>
