@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// For GitHub Pages: set base to /<repo-name>/
-// Update 'chiranjivpowers' to match your actual GitHub repo name if different.
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true'
-
+// VITE_BASE_URL is injected by GitHub Actions as /<repo-name>/
+// Falls back to '/' for local dev
 export default defineConfig({
   plugins: [vue()],
-  base: isGitHubPages ? '/chiranjivpowers/' : '/',
+  base: process.env.VITE_BASE_URL ?? '/',
 })
